@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
   const navigate = useNavigate()
-  const appName = import.meta.env.VITE_APP_NAME || 'Life Clinic Management System'
+  const appName = import.meta.env.VITE_APP_NAME || 'ClinicOS Management System'
   const redirectDelay = Number(import.meta.env.VITE_REDIRECT_DELAY_MS || 5000)
 
   useEffect(() => {
@@ -30,14 +30,14 @@ export default function Home() {
         </h1>
 
         <p className="text-slate-400 dark:text-slate-300 text-[clamp(14px,2.4vw,16px)] max-w-[46ch] mx-auto leading-relaxed mb-[18px] animate-fadeInUpDelayed">
-          Getting things ready for you. Redirecting to login shortly…
+          Getting things ready. Please wait shortly…
         </p>
 
         {/* Loader */}
         <div className="w-11 h-11 mx-auto mt-[18px] rounded-full border-[3px] border-white/25 border-t-accent animate-spin"></div>
 
         <div className="mt-4 text-xs text-slate-500 dark:text-slate-400 animate-fadeIn">
-          You will be redirected in about 5 seconds.
+          Redirecting...
         </div>
       </main>
     </div>

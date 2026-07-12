@@ -1,17 +1,10 @@
-# 🏥 Life Clinic Management System
+# 🏥 ClinicOC Management System
 
-![Life Clinic Management System Banner](preview/logo.png)
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge&logo=vercel)](https://life-clinic-management-system.vercel.app)
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
-[![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Firebase](https://img.shields.io/badge/Firebase-12.1.0-FFCA28?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.1.12-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-> 🚀 **Live Application**: [life-clinic-management-system.vercel.app](https://life-clinic-management-system.vercel.app)
+> 🚀 **Live Application**: [clinicOC-management-system.vercel.app](https://ClinicOC-management-system.vercel.app)
 
-A modern, secure, and feature-rich clinic management system built with React 19, Firebase, and Tailwind CSS. Streamline your healthcare operations with comprehensive patient management, appointment scheduling, prescription management, billing systems, and role-based access control.
+A modern, secure, and feature-rich clinic management system built with React Firebase, and Tailwind CSS. Streamline your healthcare operations with comprehensive patient management, appointment scheduling, prescription management, billing systems, and role-based access control.
 
 ## 🛠️ Tech Stack
 
@@ -114,21 +107,15 @@ Here's a comprehensive preview of all the key features and interfaces in the Lif
 - npm or yarn
 - Firebase project
 
-### 1. Clone and Install
-```bash
-git clone https://github.com/dhruvpatel16120/clinic-management-system.git
-cd clinic-management-system
-npm install
-```
 
-### 2. Firebase Setup
+### 1. Firebase Setup
 1. Go to [Firebase Console](https://console.firebase.google.com/)
 2. Create a new project or select existing one
 3. Enable **Authentication** (Email/Password)
 4. Enable **Firestore Database** (test mode)
 5. Get your Firebase configuration
 
-### 3. Environment Configuration
+### 2. Environment Configuration
    ```bash
    cp env.example.txt .env
    ```
@@ -143,7 +130,7 @@ VITE_FIREBASE_API_KEY=your_api_key
    VITE_FIREBASE_APP_ID=your_app_id
    ```
 
-### 4. Firebase Security Rules Configuration
+### 3. Firebase Security Rules Configuration
 
 **Important**: You must configure Firestore security rules to ensure proper data access control.
 
@@ -199,7 +186,7 @@ service cloud.firestore {
 - **Data Protection**: Protects patient information and medical records
 - **Compliance**: Meets healthcare data security requirements
 
-### 5. Run Development Server
+### 4. Run Development Server
 ```bash
 npm run dev
 ```
@@ -330,21 +317,11 @@ We welcome contributions! Please follow these steps:
 4. **Push** to the branch (`git push origin feature/AmazingFeature`)
 5. **Open** a Pull Request
 
-### Development Guidelines
-- Follow the existing code style
-- Add proper error handling
-- Include relevant tests
-- Update documentation as needed
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
 **Dhruv Patel**
-- GitHub: [@dhruvpatel16120](https://github.com/dhruvpatel16120)
-- Live Demo: [life-clinic-management-system.vercel.app](https://life-clinic-management-system.vercel.app)
+- GitHub: [@mattemmia](https://github.com/mattemmia)
 
 ## 🙏 Acknowledgments
 
@@ -354,22 +331,3 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Tailwind CSS** for the beautiful styling system
 - **Open Source Community** for inspiration and tools
 
-## 📞 Support
-
-If you have any questions or need help:
-
-1. **Check** the [Documentation](DOCUMENTATION.md)
-2. **Open** an [Issue](https://github.com/dhruvpatel16120/clinic-management-system/issues)
-3. **Star** the repository if you find it helpful
-
----
-
-<div align="center">
-
-**⭐ Star this repository if it helped you! ⭐**
-
-[![GitHub stars](https://img.shields.io/github/stars/dhruvpatel16120/clinic-management-system?style=social)](https://github.com/dhruvpatel16120/clinic-management-system)
-[![GitHub forks](https://img.shields.io/github/forks/dhruvpatel16120/clinic-management-system?style=social)](https://github.com/dhruvpatel16120/clinic-management-system)
-[![GitHub issues](https://img.shields.io/github/issues/dhruvpatel16120/clinic-management-system)](https://github.com/dhruvpatel16120/clinic-management-system/issues)
-
-</div>
