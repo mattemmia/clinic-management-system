@@ -16,10 +16,10 @@ Our clinic management system is built with cutting-edge technologies to ensure p
 
 ### **Frontend**
 <p>
-  <img src="https://img.shields.io/badge/React 61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=20232A" />
-  <img src="https://img.shields.io/badge/Vite 646CFF?style=for-the-badge&logo=vite&logoColor=white&labelColor=1a1a2e" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS 06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white&labelColor=0f172a" />
-  <img src="https://img.shields.io/badge/JavaScript F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelColor=fde047" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=20232A" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white&labelColor=1a1a2e" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white&labelColor=0f172a" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelColor=fde047" />
 </p>
 
 </td>
@@ -27,7 +27,7 @@ Our clinic management system is built with cutting-edge technologies to ensure p
 
 ### **Backend & Database**
 <p>
-  <img src="https://img.shields.io/badge/Firebase FFCA28?style=for-the-badge&logo=firebase&logoColor=black&labelColor=1f2937" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black&labelColor=1f2937" />
   <img src="https://img.shields.io/badge/Firestore-NoSQL-FF6B6B?style=for-the-badge&logo=firebase&logoColor=white&labelColor=374151" />
   <img src="https://img.shields.io/badge/Firebase_Auth-Secure-4F46E5?style=for-the-badge&logo=firebase&logoColor=white&labelColor=312e81" />
 </p>
@@ -39,8 +39,8 @@ Our clinic management system is built with cutting-edge technologies to ensure p
 
 ### **Dev Tools**
 <p>
-  <img src="https://img.shields.io/badge/ESLint-9.33.0-4B32C3?style=for-the-badge&logo=eslint&logoColor=white&labelColor=1e1b4b" />
-  <img src="https://img.shields.io/badge/PostCSS-8.5.6-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white&labelColor=7c2d12" />
+  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white&labelColor=1e1b4b" />
+  <img src="https://img.shields.io/badge/PostCSS-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white&labelColor=7c2d12" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=7f1d1d" />
   <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white&labelColor=881337" />
 </p>
