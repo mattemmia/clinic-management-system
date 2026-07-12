@@ -1,5 +1,4 @@
-/* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { signOut, onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase/config'
 import {
@@ -12,14 +11,7 @@ import {
 
 const AuthContext = createContext()
 
-export function useAuth() {
-  const context = useContext(AuthContext)
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider')
-  }
-  return context
-}
-
+export { AuthContext }
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null)
   const [userRole, setUserRole] = useState(null)
@@ -47,13 +39,14 @@ export function AuthProvider({ children }) {
     }
   }
 
+
+
   async function fetchUserRole(uid) {
     try {
-      const role = await fetchUserRoleFromFirestore(uid)
-      return role?.toLowerCase() || 'doctor'
+      return await fetchUserRoleFromFirestore(uid)
     } catch (error) {
       console.error('Error fetching user role:', error)
-      return 'doctor'
+      return null
     }
   }
 
@@ -69,6 +62,7 @@ export function AuthProvider({ children }) {
       }
       setLoading(false)
     })
+
     return unsubscribe
   }, [])
 

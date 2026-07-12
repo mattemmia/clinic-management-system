@@ -28,11 +28,11 @@ export async function createUserWithRole(email, password, fullName, role) {
     uid: user.uid,
     email: user.email,
     fullName: fullName,
-    role: role.toLowerCase(), // FIX: save as lowercase
+    role: role.toLowerCase(), // FIX 1
     emailVerified: false,
-    createdAt: serverTimestamp(),
+    createdAt: serverTimestamp(), // FIX 2
     lastLogin: null,
-    verificationEmailSent: serverTimestamp()
+    verificationEmailSent: serverTimestamp() // FIX 2
   })
 
   return user
@@ -47,7 +47,7 @@ export async function signInUser(email, password) {
     const userDoc = await getDoc(userDocRef)
 
     if (userDoc.exists()) {
-      await updateDoc(userDocRef, { lastLogin: serverTimestamp() })
+      await updateDoc(userDocRef, { lastLogin: serverTimestamp() }) // FIX 2
     } else {
       await setDoc(userDocRef, {
         uid: user.uid,
@@ -55,8 +55,8 @@ export async function signInUser(email, password) {
         fullName: user.displayName || 'Unknown',
         role: 'doctor',
         emailVerified: user.emailVerified,
-        createdAt: serverTimestamp(),
-        lastLogin: serverTimestamp(),
+        createdAt: serverTimestamp(), // FIX 2
+        lastLogin: serverTimestamp(), // FIX 2
         verificationEmailSent: null
       })
     }
@@ -79,17 +79,15 @@ export async function resendUserVerificationEmail(user) {
   return await sendEmailVerification(user, actionCodeSettings)
 }
 
-// FINAL FIX: Graceful fallback if offline
 export async function fetchUserRoleFromFirestore(uid) {
   try {
-    await new Promise(resolve => setTimeout(resolve, 1000)) // wait 1s for connection
     const userDoc = await getDoc(doc(db, 'staffData', uid))
     if (userDoc.exists()) {
       return userDoc.data().role
     }
-    return 'doctor'
+    return 'doctor' // fallback instead of null
   } catch (error) {
-    console.error('fetchUserRole failed, using fallback:', error.code)
-    return 'doctor' // Never throw, always return something
+    console.error('Error fetching user role:', error)
+    return 'doctor' // never throw
   }
 }
