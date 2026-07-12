@@ -1,8 +1,7 @@
-import { FaUserDoctor, FaUserNurse, FaArrowLeft, FaHouse } from 'react-icons/fa'
+import { FaUserMd, FaUserNurse, FaArrowLeft, FaHome } from 'react-icons/fa'
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 import ThemeToggle from '../ThemeToggle'
 import LogoutButton from '../LogoutButton'
-
 const roleConfig = {
   doctor: {
     icon: FaUserDoctor,
@@ -15,6 +14,7 @@ const roleConfig = {
     backTo: '/receptionist'
   }
 }
+
 
 export default function AppHeader({ role = 'doctor' }) {
   const config = roleConfig[role] || roleConfig.doctor
