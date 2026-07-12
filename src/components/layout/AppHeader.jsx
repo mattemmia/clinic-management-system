@@ -1,4 +1,4 @@
-import { FaUserDoctor, FaUserNurse, FaArrowLeft, FaHouse } from 'react-icons/fa6'
+import { FaUserDoctor, FaUserNurse, FaArrowLeft, FaHouse } from 'react-icons/fa'
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 import ThemeToggle from '../ThemeToggle'
 import LogoutButton from '../LogoutButton'
