@@ -28,11 +28,11 @@ export async function createUserWithRole(email, password, fullName, role) {
     uid: user.uid,
     email: user.email,
     fullName: fullName,
-    role: role.toLowerCase(), // FIX 1
+    role: role.toLowerCase(), // FIX: save as lowercase
     emailVerified: false,
-    createdAt: serverTimestamp(), // FIX 2
+    createdAt: serverTimestamp(),
     lastLogin: null,
-    verificationEmailSent: serverTimestamp() // FIX 2
+    verificationEmailSent: serverTimestamp()
   })
 
   return user
@@ -47,7 +47,7 @@ export async function signInUser(email, password) {
     const userDoc = await getDoc(userDocRef)
 
     if (userDoc.exists()) {
-      await updateDoc(userDocRef, { lastLogin: serverTimestamp() }) // FIX 2
+      await updateDoc(userDocRef, { lastLogin: serverTimestamp() })
     } else {
       await setDoc(userDocRef, {
         uid: user.uid,
@@ -55,8 +55,8 @@ export async function signInUser(email, password) {
         fullName: user.displayName || 'Unknown',
         role: 'doctor',
         emailVerified: user.emailVerified,
-        createdAt: serverTimestamp(), // FIX 2
-        lastLogin: serverTimestamp(), // FIX 2
+        createdAt: serverTimestamp(),
+        lastLogin: serverTimestamp(),
         verificationEmailSent: null
       })
     }
@@ -79,15 +79,17 @@ export async function resendUserVerificationEmail(user) {
   return await sendEmailVerification(user, actionCodeSettings)
 }
 
+// FINAL FIX: Graceful fallback if offline
 export async function fetchUserRoleFromFirestore(uid) {
   try {
+    await new Promise(resolve => setTimeout(resolve, 1000)) // wait 1s for connection
     const userDoc = await getDoc(doc(db, 'staffData', uid))
     if (userDoc.exists()) {
       return userDoc.data().role
     }
-    return 'doctor' // fallback instead of null
+    return 'doctor'
   } catch (error) {
-    console.error('Error fetching user role:', error)
-    return 'doctor' // never throw
+    console.error('fetchUserRole failed, using fallback:', error.code)
+    return 'doctor' // Never throw, always return something
   }
 }
