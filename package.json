@@ -1,0 +1,57 @@
+{
+  "name": "life-clinic-management-system",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A modern, secure clinic management system built with React, Firebase, and Tailwind CSS",
+  "homepage": "https://life-clinic-management-system.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhruvpatel16120/clinic-management-system.git"
+  },
+  "keywords": [
+    "clinic",
+    "management",
+    "healthcare",
+    "react",
+    "firebase",
+    "tailwindcss",
+    "authentication",
+    "role-based-access"
+  ],
+  "author": "Dhruv Patel",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "firebase": "^12.16.0",
+    "firebase-admin": "^13.10.0",
+    "framer-motion": "^12.42.2",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.1",
+    "lucide-react": "^0.541.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^7.1.2"
+  }
+}
