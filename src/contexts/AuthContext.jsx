@@ -1,5 +1,4 @@
-/* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react' // 1. add useContext
 import { signOut, onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase/config'
 import {
@@ -11,14 +10,6 @@ import {
 } from '../utils/authUtils'
 
 const AuthContext = createContext()
-
-export function useAuth() {
-  const context = useContext(AuthContext)
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider')
-  }
-  return context
-}
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null)
@@ -50,10 +41,10 @@ export function AuthProvider({ children }) {
   async function fetchUserRole(uid) {
     try {
       const role = await fetchUserRoleFromFirestore(uid)
-      return role?.toLowerCase() || 'doctor'
+      return role?.toLowerCase() || 'doctor' // FIX: force lowercase
     } catch (error) {
       console.error('Error fetching user role:', error)
-      return 'doctor'
+      return 'doctor' // final fallback
     }
   }
 
@@ -74,7 +65,7 @@ export function AuthProvider({ children }) {
 
   const value = {
     currentUser,
-    userRole,
+    userRole, // 2. expose userRole
     signup,
     login,
     logout,
@@ -88,4 +79,9 @@ export function AuthProvider({ children }) {
       {!loading && children}
     </AuthContext.Provider>
   )
+}
+
+// 3. ADD THIS HOOK - THIS FIXES THE ERROR
+export function useAuth() {
+  return useContext(AuthContext)
 }

@@ -267,11 +267,6 @@ src/
 | `npm run preview` | Preview production build |
 | `npm run lint` | Run ESLint for code quality |
 
-## 🌐 Deployment
-
-This application is deployed on **Vercel** and is live at:
-**[life-clinic-management-system.vercel.app](https://life-clinic-management-system.vercel.app)**
-
 
 ## 🔒 Security Features
 
@@ -348,6 +343,15 @@ We welcome contributions! Please follow these steps:
 
 **Dhruv Patel**
 - GitHub: [@mattemmia](https://github.com/mattemmia)
+- Number: [Mathew Emmanuel](07038321151)
+<a 
+  href="https://wa.me/2349036583105?text=Hi, I'm interested in your Clinic Management System" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg"
+>
+  Chat on WhatsApp
+</a>
 
 ## 🙏 Acknowledgments
 
